@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+section{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+header{
+    text-align: center;
+    padding: 10px 0;
+    background: orangered;
+    color: white;
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 9999;
+}
+.container{
+    width: 100%;
+    display: flex;
+    padding: 2% 10%;
+}
+.img-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.img-div{
+    height: 20rem;
+    width: 20rem;
+    aspect-ratio: 1 / 1;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    overflow: hidden;
+}
+.img-div img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.des{
+    width: 50%;
+    position: relative;
+}
+.quote{
+    position: absolute;
+    color: rgba(255, 68, 0, 0.114);
+    font-size: 3.5rem;
+    top: -2rem;
+    left: -0.9rem;
+}
+#name{
+    color: orangered;
+    font-size: 2.5rem;
+    margin-top: 15px;
+}
+#job{
+    font-weight: 600;
+}
+.buttons-container{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+.chevron{
+    font-size: 2.7rem;
+    cursor: default;
+    color: orangered;
+    margin-top: 2rem;
+}
+#left-button:hover,#right-button:hover{
+    user-select: none;
+    color: rgb(221, 59, 0);
+}
+#random{
+    padding: 6px 14px;
+    border: 1.5px solid orangered;
+    color: rgb(227, 62, 1);
+    background: rgba(255, 68, 0, 0.133);
+    border-radius: 5px;
+    margin-top: 1.55rem;
+}
+#random:hover{
+    background: rgba(255, 68, 0, 0.163);
+    cursor: pointer;
+}
+#random:active,#left-button:active,#right-button:active{
+    transform: scale(0.95);
+}
+@media (max-width:1024px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 2%;
+    }
+    .img-container{
+        width: 100%;
+        margin-top: 13rem;
+        transform: scale(0.8);
+    }
+    .des{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+}
